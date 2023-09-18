@@ -1,0 +1,76 @@
+@import "responsivity";
+
+/** BOILERPLATE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  /* Places underlines below the descenders */
+  text-underline-position: under;
+}
+
+html {
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+  scroll-padding-top: 2rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.page {
+  margin: 0 20px;
+
+  @include lg {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+input {
+  box-shadow: 0 0 3px gray;
+}
+
+//
+
+.header-container, .footer-container {
+  background: lightblue;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.footer-container {
+  padding: 20px;
+  background: lightgray;
+}
